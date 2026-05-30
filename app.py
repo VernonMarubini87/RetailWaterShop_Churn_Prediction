@@ -4,7 +4,6 @@
 # Model is exported as model.pkl
 # Order of the X -> 'Age', 'Gender', 'Tenure', 'MonthlyCharges'
 
-from pyexpat import model
 
 import streamlit as st
 import joblib
@@ -53,7 +52,7 @@ if predict_button:
 
     st.write(f"Predicted: {predicted}")
 
-    if prediction[0] == 1:
+    if prediction == 1:
         st.write("The customer is likely to churn.")
     else:
         st.write("The customer is not likely to churn.")
